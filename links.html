@@ -3,20 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xd_korm corn</title>
+    <title>Мой сайт</title>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Play', sans-serif;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .card {
+            background-color: #2a2a2a;
+            width: 200px;
+            height: 120px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        .card img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ссылки</h1>
-<ul>
-    <li><a href="https://www.youtube.com/@xd_korm69" target="_blank">YouTube</a></li>
-    <li><a href="https://www.tiktok.com/@твоя_ссылка" target="_blank">TikTok</a></li>
-    <li><a href="https://www.twitch.tv/твоя_ссылка" target="_blank">Twitch</a></li>
-    <li><a href="https://github.com/xdkorm" target="_blank">GitHub</a></li>
-    <li><a href="https://steamcommunity.com/id/твоя_ссылка" target="_blank">Steam</a></li>
-</ul>
-
-    <script src="script.js"></script>
+    <nav>
+        <a href="index.html">Главная</a> |
+        <a href="about.html">Обо мне</a> |
+        <a href="links.html">Ссылки</a>
+    </nav>
+    
+    <h1>Мои ссылки</h1>
+    <div class="container">
+        <div class="card">
+            <a href="https://www.youtube.com/@xd_korm69" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube"> YouTube
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://github.com/xdkorm" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"> GitHub
+            </a>
+        </div>
+    </div>
 </body>
 </html>
