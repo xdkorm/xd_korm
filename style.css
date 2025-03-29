@@ -5,3 +5,13 @@ body {
     text-align: center;
     padding: 150px;
 }
+
+h1 {
+    font-family: 'Play', sans-serif;
+    font-weight: 700; /* Жирный */
+}
+
+p {
+    font-family: 'Play', sans-serif;
+    font-weight: 400; /* Обычный */
+}
