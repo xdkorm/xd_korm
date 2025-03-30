@@ -15,3 +15,9 @@ p {
     font-family: 'Play', sans-serif;
     font-weight: 400; /* Обычный */
 }
+
+.card img {
+    width: 40px;
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-right: 10px;
+}
