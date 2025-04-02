@@ -38,7 +38,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             padding: 10px;
         }
-        .card:hover {
+        .card:hover:not(.disabled) {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
         }
@@ -54,10 +54,13 @@
             border-radius: 15px;
         }
         .card a img {
-            width: 40px;
-            height: 40px;
+            width: 16px;
+            height: 16px;
             object-fit: contain;
             margin-right: 10px;
+        }
+        .card.disabled {
+            cursor: not-allowed;
         }
         .description {
             max-width: 800px;
@@ -72,6 +75,14 @@
         }
         .description p {
             margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .description img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            margin-right: 10px;
         }
         .description .overlay {
             margin: 30px 0;
@@ -107,8 +118,8 @@
                 <img src="images/steam-icon.png" alt="Steam"> Steam
             </a>
         </div>
-        <div class="card">
-            <a href="#" style="pointer-events: none; opacity: 0.5;">
+        <div class="card disabled">
+            <a href="#" style="pointer-events: none;">
                 <img src="images/yt_icon_mono_dark.png" alt="YouTube"> Мем-канал
             </a>
         </div>
@@ -132,23 +143,21 @@
     <div class="description">
         <h3>Подробнее</h3>
         <div class="overlay"></div>
-        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> <b>YouTube:</b> Использую как место для щитпостинга и хранения видосов для друзей, т.к. Discord ограничивает загрузку до 8MB.</p>
+        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> Использую как место для щитпостинга и хранения видосов для друзей.</p>
         <div class="overlay"></div>
-        <p><img src="images/github-mark-white.png" alt="GitHub"> <b>GitHub:</b> Пока пусто, но именно на GitHub я разместил этот сайт.</p>
+        <p><img src="images/github-mark-white.png" alt="GitHub"> Пока пусто, но именно на GitHub я разместил этот сайт.</p>
         <div class="overlay"></div>
-        <p><img src="images/tiktok-icon.png" alt="TikTok"> <b>TikTok:</b> Пока не планирую активно вести, но пусть будет.</p>
+        <p><img src="images/tiktok-icon.png" alt="TikTok"> Пока не планирую активно вести, но пусть будет.</p>
         <div class="overlay"></div>
-        <p><img src="images/steam-icon.png" alt="Steam"> <b>Steam:</b> В основном играю в TF2 и Warzone.</p>
+        <p><img src="images/steam-icon.png" alt="Steam"> В основном играю в TF2 и Warzone.</p>
         <div class="overlay"></div>
-        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> <b>Мем-канал:</b> С другом снимаем контент в Garry’s Mod для детской аудитории, но пока не могу рассказать больше. <i>(Кнопка заблокирована)</i></p>
+        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> Мем-канал: контент в Garry’s Mod для детской аудитории.</p>
         <div class="overlay"></div>
-        <p><img src="images/discord-icon.png" alt="Discord"> <b>Discord:</b> Мой личный Discord и сервер АмНяма.</p>
+        <p><img src="images/discord-icon.png" alt="Discord"> Мой личный Discord и сервер АмНяма.</p>
         <div class="overlay"></div>
-        <p><img src="images/modrinth-icon.png" alt="Modrinth"> <b>Modrinth:</b> Кинул туда один ресурс-пак на Dead Ringer.</p>
+        <p><img src="images/modrinth-icon.png" alt="Modrinth"> Кинул туда один ресурс-пак на Dead Ringer.</p>
         <div class="overlay"></div>
-        <p><img src="images/spotify-icon.png" alt="Spotify"> <b>Spotify:</b> Мой плейлист сочетает лучшее из двух миров:<br>
-           — **Годнота**: *Des Rocs, Himalayas, MiatriSS, Mellsher и другие.*<br>
-           — **Рофло-треки**: *Иван Золо, Uncle Dane и прочие сольники.*</p>
+        <p><img src="images/spotify-icon.png" alt="Spotify"> Мой плейлист сочетает лучшее из двух миров.</p>
     </div>
 
 </body>
