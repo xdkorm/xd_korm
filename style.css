@@ -22,3 +22,10 @@ p {
     object-fit: cover; /* Сохраняет пропорции изображения */
     margin-right: 10px;
 }
+
+.description img {
+    width: 16px; /* Уменьшаем размер картинок в описаниях */
+    height: 16px;
+    object-fit: contain;
+    margin-right: 10px;
+}
