@@ -1,86 +1,164 @@
-<style>
-    body {
-        font-family: 'Play', sans-serif;
-        background-color: #181818;
-        color: white;
-        text-align: center;
-        padding: 50px;
-    }
-    .overlay {
-        position: relative;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(to right, rgba(150, 150, 150, 0) 0%, rgba(150, 150, 150, 1) 10%, rgba(150, 150, 150, 1) 90%, rgba(150, 150, 150, 0) 100%);
-        margin: 20px 0;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        justify-content: center;
-        max-width: 800px;
-        margin: auto;
-    }
-    .card {
-        background-color: #2a2a2a;
-        height: 120px;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 10px;
-    }
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    }
-    .card a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-    }
-    .card a img {
-        width: 40px; /* Размер картинок на плитках */
-        height: 40px;
-        object-fit: contain;
-        margin-right: 10px;
-    }
-    /* Уменьшаем размер картинок в блоках с описаниями */
-    .description img {
-        width: 16px; /* Уменьшаем размер картинок в описаниях */
-        height: 16px;
-        object-fit: contain;
-        margin-right: 10px;
-    }
-    .description {
-        max-width: 800px;
-        margin: auto;
-        text-align: left;
-        font-size: 16px;
-        line-height: 1.5;
-    }
-    .description h3 {
-        text-align: center;
-        margin-top: 40px;
-    }
-    .description p {
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-    }
-    .description .overlay {
-        margin: 30px 0;
-    }
-    @media (max-width: 768px) {
-        .container {
-            grid-template-columns: repeat(2, 1fr);
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Play', sans-serif;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            padding: 50px;
         }
-    }
-</style>
+        .overlay {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, rgba(150, 150, 150, 0) 0%, rgba(150, 150, 150, 1) 10%, rgba(150, 150, 150, 1) 90%, rgba(150, 150, 150, 0) 100%);
+            margin: 20px 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card {
+            background-color: #2a2a2a;
+            height: 120px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px;
+        }
+        .card:hover:not(.disabled) {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        .card a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .card a img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+        .card.disabled {
+            cursor: not-allowed;
+        }
+        .description {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .description h3 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .description p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .description img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+        .description .overlay {
+            margin: 30px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Мои ссылки</h1>
+    <div class="container">
+        <div class="card">
+            <a href="https://www.youtube.com/@xd_korm69" target="_blank">
+                <img src="images/yt_icon_mono_dark.png" alt="YouTube"> YouTube
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://github.com/xdkorm" target="_blank">
+                <img src="images/github-mark-white.png" alt="GitHub"> GitHub
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://www.tiktok.com/@xd_korm" target="_blank">
+                <img src="images/tiktok-icon.png" alt="TikTok"> TikTok
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://steamcommunity.com/id/xd_korm/" target="_blank">
+                <img src="images/steam-icon.png" alt="Steam"> Steam
+            </a>
+        </div>
+        <div class="card disabled">
+            <a href="#" style="pointer-events: none;">
+                <img src="images/yt_icon_mono_dark.png" alt="YouTube"> Мем-канал
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://discord.gg/9p4a2ykgag" target="_blank">
+                <img src="images/discord-icon.png" alt="Discord"> Discord
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://modrinth.com/user/xd_korm" target="_blank">
+                <img src="images/modrinth-icon.png" alt="Modrinth"> Modrinth
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://open.spotify.com/playlist/1lvWntkwGS78HAMt1h48tI" target="_blank">
+                <img src="images/spotify-icon.png" alt="Spotify"> Spotify
+            </a>
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>Подробнее</h3>
+        <div class="overlay"></div>
+        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> Использую как место для щитпостинга и хранения видосов для друзей.</p>
+        <div class="overlay"></div>
+        <p><img src="images/github-mark-white.png" alt="GitHub"> Пока пусто, но именно на GitHub я разместил этот сайт.</p>
+        <div class="overlay"></div>
+        <p><img src="images/tiktok-icon.png" alt="TikTok"> Пока не планирую активно вести, но пусть будет.</p>
+        <div class="overlay"></div>
+        <p><img src="images/steam-icon.png" alt="Steam"> В основном играю в TF2 и Warzone.</p>
+        <div class="overlay"></div>
+        <p><img src="images/yt_icon_mono_dark.png" alt="YouTube"> Мем-канал: контент в Garry’s Mod для детской аудитории.</p>
+        <div class="overlay"></div>
+        <p><img src="images/discord-icon.png" alt="Discord"> Мой личный Discord и сервер АмНяма.</p>
+        <div class="overlay"></div>
+        <p><img src="images/modrinth-icon.png" alt="Modrinth"> Кинул туда один ресурс-пак на Dead Ringer.</p>
+        <div class="overlay"></div>
+        <p><img src="images/spotify-icon.png" alt="Spotify"> Мой плейлист сочетает лучшее из двух миров.</p>
+    </div>
+
+</body>
+</html>
