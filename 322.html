@@ -15,10 +15,12 @@
     }
     .overlay {
         position: relative;
-        width: 100%;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
         height: 3px;
         background: linear-gradient(to right, rgba(150, 150, 150, 0) 0%, rgba(150, 150, 150, 1) 10%, rgba(150, 150, 150, 1) 90%, rgba(150, 150, 150, 0) 100%);
-        margin: 20px 0;
+        margin: 30px 0;
     }
     .container {
         display: grid;
@@ -54,27 +56,24 @@
         border-radius: 15px;
     }
     .card a img {
-        width: 40px; /* Размер картинок на плитках */
+        width: 40px;
         height: 40px;
         object-fit: contain;
         margin-right: 10px;
     }
-    /* Уменьшаем размер картинок в блоках с описаниями */
-    .description img {
-        width: 16px; /* Уменьшаем размер картинок в описаниях */
-        height: 16px;
-        object-fit: contain;
-        margin-right: 10px;
-    }
     .description {
-        max-width: 100%;
+        max-width: 600px;
         margin: auto;
-        text-align: left;
         font-size: 16px;
         line-height: 1.5;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .description h3 {
         text-align: center;
+        align-self: center;
         margin-top: 40px;
     }
     .description p {
@@ -82,8 +81,11 @@
         display: flex;
         align-items: center;
     }
-    .description .overlay {
-        margin: 30px 0;
+    .description img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+        margin-right: 10px;
     }
     @media (max-width: 768px) {
         .container {
